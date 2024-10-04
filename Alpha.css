@@ -1,0 +1,665 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+    background-image:url(./IMG/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #f5f5f5;
+}
+nav{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 1rem;
+
+}
+/* child selector . it will target element which is under the particular element 
+examaple: div>hi{}
+it means it will target only that h1 that is under div tag
+*/
+
+/* 1rem=16px : whenever we want huge changes then go for rem 
+and whenever we want small changes then go for px */
+
+/* hover: control parent and its child */
+
+#left>h1{
+    color: white;
+    font: 1rem;
+    margin: 0;
+
+}
+#left > h1 > span{
+
+    font-weight: 100;
+}
+
+#right > #right-cont-nav{
+
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+}
+#right-cont-nav > li > a{
+
+    color: white;
+    padding: 1rem ;
+    text-decoration: none;
+}
+
+#right-cont-nav > li > a > button{
+
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+    border:  2px solid rgba(222, 226, 226);
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+
+
+}
+
+
+/* -----------------------------------------Dropdown-------------------------------------- */
+
+
+#menu{
+
+    list-style-type: none;
+    position: absolute; /*now this absutute take drop as a parent not body */
+    background-color: white;
+    padding: 0;
+    top: 180%;
+    right: 0%;
+    width: 180%;
+    display: none; /*content should not be there initialy */
+
+}
+
+#drop:hover #menu{
+
+    display: block;
+
+}
+
+#menu > li > a{
+
+    color: gray;
+    text-decoration: none;
+    display: block;
+    border-bottom: 2px solid  rgba(230, 227, 227, 0.688);
+    padding: 0.1rem;
+    padding-left: 0.5rem;
+    font-weight: 1rem;
+}
+
+#menu > li > a:hover{
+    background-color: rgba(222, 48, 48, 0.65);
+    color: white;
+}
+
+#drop
+{
+    position: relative;
+}
+
+/* -------------------------sub-menu ----------------------------------------*/
+
+#drop2
+{
+    position: relative;
+}
+#sub-menu{
+
+    list-style: none;
+    background-color:white;
+    position: absolute;
+    padding: 0;
+    top: 90%;
+    right:100%;
+    width:90%;
+    display: none;
+}
+#sub-menu > li > a{
+
+    text-decoration: none;
+    color: grey;
+    padding: 0.1rem;
+    padding-left: 0.5rem;
+    font-weight: 1rem;
+    
+    border-bottom: 2px solid  rgba(230, 227, 227, 0.688);
+}
+
+#sub-menu > li > a:hover{
+
+    background-color:rgba(222, 48, 48, 0.65);
+    color: white;
+
+}
+#drop2:hover #sub-menu
+{
+    display: block;
+}
+
+
+/*------------------------- Alpha Section -------------------------------------- */
+
+#alpha{
+
+    text-align: center;
+    margin-top: 7rem ;
+    margin-bottom: 7rem;
+
+}
+
+#alpha > h2
+{
+    color: white;
+    font-size: 3rem ;
+    font-weight: 300;
+    margin-bottom: 0;
+
+
+}
+
+#alpha > p{
+
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+#alpha > button{
+
+    width: 12%;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    color: gray;
+    margin-right: 1rem;
+}
+#alpha > #learn {
+
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgba(228, 221, 221, 0.513);
+
+}
+
+/* -------------------------------Mobile Section ---------------------------------- */
+
+#mobile
+{
+    background-color: white;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+    padding-top: 1rem;
+    margin-top: 10rems;
+}
+#mobile > h2{
+    color: rgba(140, 138, 138, 0.925);
+    font-size: 2rem;
+    font-weight: 300;
+    
+}
+#mobile > p{
+
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: gray;
+    border-top: 2px solid rgba(128, 128, 128, 0.539);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin: auto;
+    width: 70%;
+
+}
+#mobile > img{
+
+    width: 100%;
+}
+
+
+      /* ----------------------------- section icon------------------------------ */
+#icons {
+
+    width: 70%;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2rem;
+    box-sizing: border-box;
+
+}
+
+#icons> div{
+
+display: inline-block;
+width: 48%;
+text-align: center;
+}
+
+.fa-bolt-lightning{
+
+    background-color: #e89980;
+    color: white;
+    border-radius: 100%;
+    padding: 1rem 1.4rem;
+    font-size: 2rem;
+}
+
+.fa-chart-area{
+
+    background-color: #7fcdb7;
+    color: white;
+    border-radius: 100%;
+    padding: 1rem 1.2rem;
+    font-size: 2rem;
+
+}
+.fa-cloud
+{
+    background-color: #90b0ba;
+    color: white;
+    border-radius: 100%;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+
+}
+
+.fa-lock
+{
+    background-color: #e5cb95;
+    color: white;
+    border-radius: 100%;
+    padding: 1rem 1.3rem;
+    font-size: 2rem; 
+}
+
+#icons > div > h2{
+
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+#icons > div > p{
+
+    font-weight: 300;
+}
+
+#div1{
+
+    border-right: 2px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
+   position: relative;           /* positionn relative bcoz we were having gap btn the borders to remove that gap */
+    top:2px;
+    left: 3.5px;
+}
+#div4{
+    border-top: 2px solid #e5e5e5;
+    border-left: 2px solid #e5e5e5;
+
+}
+#icons > div{
+
+    padding-top: 2rem;
+}
+
+
+/* ---------------------------------------------------Card Section--------------------------------------------- */
+#card{
+
+   
+    width: 70%;
+    margin: 2rem auto auto auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#card > div{
+    
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
+    border-radius: 5px;
+
+}
+
+#card > div >img{
+
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#card > div > h2{
+    font-size: 2rem;
+    font-weight: 300;
+
+}
+
+#card > div > p{
+    font-size:1rem ;
+    font-weight: 100;
+
+}
+#card > div > button{
+
+    border: 2px solid rgba(216, 213, 213, 0.94);
+    background-color: white;
+    border-radius: 5px;
+    padding: 14px 24px;
+
+
+}
+
+
+
+/*--------------------------------- SignUp Section-------------------------------- */
+
+#signup{
+
+    margin-top: 5rem;
+    background-color: #e89980;
+    text-align: center;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+}
+#signup > h2
+{
+    color: white;
+    font-size: 2rem ;
+    font-weight: 300;
+    margin-bottom: 0;
+
+
+}
+
+#signup > p{
+
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+#signup > button{
+
+    width: 12%;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    color: rgb(255, 127, 80);
+    margin-right: 1rem;
+    background-color: whitesmoke;
+}
+
+#signup >input
+{
+  color: white;
+  height: 45px;
+  width: 20%;
+  border: none;
+  border-radius: 5px;  
+  background-color: rgba(244, 243, 243, 0.206); 
+  margin-right:10px ;
+  padding-left: 10px;
+
+}
+
+
+/* ------------------------------------------Footer section---------------------------------------------------- */
+
+footer{
+
+    padding: auto;
+    text-align: center;
+}
+
+footer > #icon{
+
+    margin-top: 3rem;
+    
+
+}
+.fa-brands{
+
+    color:  hsla(0, 0%, 53%, 0.578);
+    padding-left: 10px;
+    width: 20px;
+    padding: 0.7rem 1rem;
+    font-size: 1.5rem; 
+}
+
+#icon> i:hover{
+
+    color:hsla(0, 1%, 43%, 0.578); ;
+}
+#copyright{
+
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+#copyright > p{
+
+    color: hsla(0, 0%, 53%, 0.578);
+    border-right:  solid 1px #ddddddee;
+    padding: 5px;
+ 
+}
+
+
+
+/* it will not displya in desktop version */
+#mo-menu
+{
+    display: none;
+}
+
+/* -------------------------------Mobile Version -------------------------------------- */
+
+@media (max-width:600px)
+{
+    /* where we want to changes do the changes */
+    body{
+       
+        background-size: 180%;
+
+        /* background-imagem position-x : is horizantaly will change only not vertically */
+        background-position-x: center;
+       
+    }
+
+    /* it will displya in mobile version */
+    #mo-menu{
+        display: inline-block;
+        color: white;
+        background-color: rgb(213,204,204);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    nav{
+        display: none;
+    }
+
+    #alpha{
+
+        width: 80%;
+        margin: auto;
+        margin-top: rem ;
+        margin-bottom: 2rem;
+    
+    }
+
+    #alpha > h2
+{
+    font-size: 2rem ;
+    
+}
+
+#alpha > p{
+
+    font-size: 1.1rem;
+    
+}
+
+#alpha > button{
+
+    width: 100%;
+    margin-bottom: 1rem;
+}
+#alpha > #learn {
+
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgba(228, 221, 221, 0.513);
+
+}
+
+
+#mobile
+{  
+    width: 100%;
+    border-radius: 0px;
+    padding-top: 0rem;
+    margin-top: 0rem;
+}
+#mobile > h2{
+    
+    font-size: 1.5rem;
+   
+    
+}
+#mobile > p{
+
+    width: 90%;
+
+}
+
+br{
+    display: none;
+}
+#mobile > img{
+
+    width: 100%;
+}
+
+
+#icons {
+
+    width: 100%;
+    margin: 1rem auto auto auto;
+
+}
+
+#icons> div{
+
+display: inline-block;
+width: 100%;
+text-align: center;
+border-bottom: 2px solid #e5e5e5;
+}
+
+#div1{
+
+    border-right: none;
+    border-bottom: none;
+    position: relative;           /* positionn relative bcoz we were having gap btn the borders to remove that gap */
+    top:  0px;
+    left: 0px;
+}
+#div4{
+    border-left: none;
+    border-top:none;
+
+}
+
+#card{
+
+   
+    width: 100%;
+    margin: 1rem auto auto auto;
+    display: block;
+    
+}
+
+#card > div{
+    margin-top: 1rem;
+    width: 100%;
+   
+}
+
+#card > div > button{
+
+   
+    margin-left: 10px;
+    margin-right: 40px;
+    width: 100%;
+
+
+}
+
+
+#signup > p{
+
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: auto auto 2rem auto;
+}
+
+#signup > button{
+
+    width: 80%;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    color: rgb(255, 127, 80);
+    margin-right: 1rem;
+    background-color: whitesmoke;
+}
+
+#signup >input
+{
+  color: white;
+  height: 45px;
+  width: 77%;
+  border: none;
+  border-radius: 5px;  
+  background-color: rgba(244, 243, 243, 0.206); 
+  margin-right:10px ;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+
+}
+
+#copyright{
+
+   display: block;
+    
+    
+}
+
+#copyright > p{
+
+    color: hsla(0, 0%, 53%, 0.578);
+    border-right:  solid 1px #ddddddee;
+    padding: 5px;
+ 
+}
+
+}
